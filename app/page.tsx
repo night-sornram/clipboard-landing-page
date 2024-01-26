@@ -1,113 +1,262 @@
 import Image from "next/image";
+import Link from "next/link";
+
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className=" w-full h-screen bg-header-mobile md:bg-header-desktop bg-no-repeat bg-contain bg-top flex flex-col">
+      <div className=" px-6 xl:px-0 md:px-40 space-y-10 flex flex-col mt-40 w-full justify-center items-center">
+        <div>
+          <Image
+          src={"images/logo.svg"}
+          width={125}
+          height={125}
+          alt="logo"/>
+        </div>
+        <div className=" text-center flex-col space-y-5 flex justify-center items-center">
+          <div className=" text-center text-4xl md:text-5xl font-bold text-custom-300">
+            A history of everything you copy
+          </div>
+          <div className="xl:px-40 text-custom-400">
+            Clipboard allows you to track and organize everything you copy. Instantly access your clipboard on all your devices.
+          </div>
+        </div>
+        <div className=" flex md:flex-row w-full justify-center md:space-y-0 space-y-10 flex-col md:space-x-5">
+          <button className=" md:w-auto w-full py-3 px-5 shadow-[0_10px_60px_-15px_rgba(38,186,164,1)] shadow-custom-100 bg-custom-100 rounded-full text-white">
+            Download for IOS
+          </button>
+          <button className="md:w-auto w-full py-3 px-5 shadow-[0_10px_60px_-15px_rgba(97,115,255,1)] bg-custom-200 rounded-full text-white">
+            Download for Mac
+          </button>
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
+      <div className=" px-6 md:px-40 space-y-10 flex flex-col mt-40 w-full justify-center items-center">
+        <div className=" text-center flex-col space-y-5 flex justify-center items-center">
+          <div className=" text-center text-3xl font-bold text-custom-300">
+            Keep track of your snippets
+          </div>
+          <div className="xl:px-40 text-custom-400">
+            Clipboard instantly stores any item you copy in the cloud, meaning you can access your snippets immediately on all your devices. Our Mac and iOS apps will help you organize everything.</div>
+          </div>
+      </div>
+      <div className= " mt-20 w-full flex flex-col md:flex-row">
+        <div className=" w-full md:w-1/2 flex justify-center items-center">
+          <Image
+          src={"/images/image-computer.png"}
+          width={752}
+          height={572}
+          className=" md:px-0 px-10"
+          alt="computer"/>
+        </div>
+        <div className="p-10 md:w-1/2 w-full  space-y-7 flex flex-col justify-center items-start">
+          <div className=" w-full text-center md:text-start flex flex-col">
+            <div className=" text-xl text-custom-300 font-bold">
+              Quick Search
+            </div>
+            <div className=" text-custom-400">
+              Easily search your snippets by content, category, web address, application, and more.
+            </div>
+          </div>
+          <div className=" w-full text-center md:text-start  flex flex-col">
+            <div className=" text-xl text-custom-300 font-bold">
+              iCloud Sync
+            </div>
+            <div className=" text-custom-400">
+              Instantly saves and syncs snippets across all your devices.
+            </div>
+          </div>
+          <div className=" w-full text-center md:text-start  flex flex-col">
+            <div className=" text-xl text-custom-300 font-bold">
+              Complete History
+            </div>
+            <div className=" text-custom-400">
+              Retrieve any snippets from the first moment you started using the app.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className=" px-6 md:px-40 space-y-10 flex flex-col mt-20 w-full justify-center items-center">
+        <div className=" text-center flex-col space-y-5 flex justify-center items-center">
+          <div className=" text-center text-3xl font-bold text-custom-300">
+          Access Clipboard anywhere
+          </div>
+          <div className="xl:px-40 text-custom-400">
+            Whether you’re on the go, or at your computer, you can access all your Clipboard snippets in a few simple clicks.
+          </div>
+        </div>
+      </div>
+      <div className=" px-20 w-full mt-20 flex justify-center items-center">
         <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+        src={"/images/image-devices.png"}
+        width={905}
+        height={575}
+        alt="devices"/>
       </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className=" md:px-40 space-y-10 flex flex-col mt-20 w-full justify-center items-center">
+        <div className=" text-center flex-col space-y-5 flex justify-center items-center">
+          <div className=" text-center text-3xl font-bold text-custom-300">
+            Supercharge your workflow
+          </div>
+          <div className="xl:px-40 text-custom-400">
+            We’ve got the tools to boost your productivity.
+          </div>
+        </div>
       </div>
-    </main>
-  );
-}
+      <div className=" mt-20 w-full flex-col md:flex-row flex space-y-5 md:space-y-0  md:space-x-5 px-6 md:px-10 lg:px-20 xl:px-40">
+        <div className=" w-full md:w-1/3 flex-col flex justify-center items-center space-y-5">
+          <Image
+          src={"/images/icon-blacklist.svg"}
+          width={44}
+          height={40}
+          alt="blacklist"/>
+          <div className=" text-center text-custom-300 font-bold text-xl lg:text-2xl">
+            Create blacklists
+          </div>
+          <div className=" text-center text-custom-400 text-sm lg:text-base">
+            Ensure sensitive information never makes its way to your clipboard by excluding certain sources.
+          </div>
+        </div>
+        <div className=" w-full md:w-1/3 flex-col flex justify-center items-center space-y-5">
+          <Image
+          src={"/images/icon-text.svg"}
+          width={44}
+          height={40}
+          alt="text"/>
+          <div className=" text-center text-custom-300 font-bold text-xl lg:text-2xl">
+            Plain text snippets
+          </div>
+          <div className=" text-center text-custom-400 text-sm lg:text-base">
+            Remove unwanted formatting from copied text for a consistent look. 
+          </div>
+        </div>
+        <div className=" w-full md:w-1/3 flex-col flex justify-center items-center space-y-5">
+          <Image
+          src={"/images/icon-preview.svg"}
+          width={44}
+          height={40}
+          alt="preview"/>
+          <div className=" text-center text-custom-300 font-bold text-xl lg:text-2xl">
+            Sneak preview
+          </div>
+          <div className=" text-center text-custom-400 text-sm lg:text-base">
+            Quick preview of all snippets on your Clipboard for easy access.
+          </div>
+        </div>
+      </div>
+      <div className=" mt-40 w-full  flex-col md:flex-row flex justify-center items-center md:justify-evenly space-y-16 md:space-y-0   md:space-x-16 px-6 md:px-10 lg:px-20 xl:px-40">
+        <div>
+          <Image
+          src={"/images/logo-google.png"}
+          width={165}
+          height={49}
+          alt="google"/>
+        </div>
+        <div>
+          <Image
+          src={"/images/logo-ibm.png"}
+          width={139}
+          height={51}
+          alt="ibm"/>
+        </div>
+        <div>
+          <Image
+          src={"/images/logo-microsoft.png"}
+          width={161}
+          height={35}
+          alt="microsoft"/>
+        </div>
+        <div>
+          <Image
+          src={"/images/logo-hp.png"}
+          width={135}
+          height={56}
+          alt="hp"/>
+        </div>
+        <div>
+          <Image
+          src={"/images/logo-vector-graphics.png"}
+          width={125}
+          height={30}
+          alt="vector"/>
+        </div>
+      </div>
+      <div className=" px-6 xl:px-0 md:px-40 space-y-10 flex flex-col mt-40 pb-40 w-full justify-center items-center">
+        <div className=" text-center flex-col space-y-5 flex justify-center items-center">
+          <div className=" text-center text-3xl font-bold text-custom-300">
+            Clipboard for iOS and Mac OS
+          </div>
+          <div className="xl:px-40 text-custom-400">
+            Available for free on the App Store. Download for Mac or iOS, sync with iCloud and you’re ready to start adding to your clipboard.
+          </div>
+        </div>
+        <div className=" flex md:flex-row w-full justify-center md:space-y-0 space-y-10 flex-col md:space-x-5">
+          <button className=" md:w-auto w-full py-3 px-5 shadow-[0_10px_60px_-15px_rgba(38,186,164,1)] shadow-custom-100 bg-custom-100 rounded-full text-white">
+            Download for IOS
+          </button>
+          <button className="md:w-auto w-full py-3 px-5 shadow-[0_10px_60px_-15px_rgba(97,115,255,1)] bg-custom-200 rounded-full text-white">
+            Download for Mac
+          </button>
+        </div>
+      </div>
+      <div className=" w-full xl:px-40 lg:px-20 md:px-10 py-10 bg-custom-400 bg-opacity-20 flex flex-col md:flex-row md:justify-between ">
+        <div className=" space-y-5 md:space-y-0 text-custom-300 flex flex-col md:flex-row md:space-x-10 lg:space-x-20">
+          <div className=" flex justify-center items-center">
+            <Image
+            src={"images/logo.svg"}
+            width={125}
+            height={125}
+            className=" w-10 h-10"
+            alt="logo"/>
+          </div>
+          <div className=" text-center md:text-start space-y-5 flex flex-col">
+            <Link href={"/"}>
+              FAQs
+            </Link>
+            <Link href={"/"}>
+              Contact Us
+            </Link>
+          </div>
+          <div className="text-center md:text-start space-y-5 flex flex-col">
+            <Link href={"/"}>
+              Privacy Policy
+            </Link>
+            <Link href={"/"}>
+              Press kit
+            </Link>
+          </div>
+          <div className="text-center md:text-start space-y-5 flex flex-col">
+            <Link href={"/"}>
+              Install Guide
+            </Link>
+
+          </div>
+        </div>
+        <div className=" mt-10 md:mt-0 flex justify-center items-center flex-row space-x-5"> 
+          <Link href={"/"}>
+            <Image
+            src={"/images/icon-facebook.svg"}
+            width={24}
+            height={24}
+            alt="facebook"/>
+          </Link>
+          <Link href={"/"}>
+            <Image
+            src={"/images/icon-twitter.svg"}
+            width={24}
+            height={24}
+            alt="twitter"/>
+          </Link>
+          <Link href={"/"}>
+            <Image
+            src={"/images/icon-instagram.svg"}
+            width={24}
+            height={24}
+            alt="instagram"/>
+          </Link>
+        </div>
+      </div>
+      
+
+    </div>
+  )}
+    
